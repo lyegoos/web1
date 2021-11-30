@@ -3,18 +3,7 @@
 <head>
   <title>practice html - Welcome</title>
   <meta charset="utf-8">
-  <style>
-  a {
-    color:red;
-    text-decoration: none;
-  }
-  h2{
-    font-size: 45px;
-    text-align: center;
-    border-bottom: 1px solid black;
-    margin:0;
-  }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <h1><a href="https://velog.io/@dbwlsghks258" target="_blank" title="lyegoos velog">LYEGOOS</a> HTML</h1>
@@ -55,18 +44,21 @@
   <img src = "lyegoos.jpg">
 
   <h2><a href="index.html">WEB</a></h2>
-  <ol>
-    <li><a href="1.html">HTML</a></li>
-    <li><a href="2.html">CSS</a></li>
-    <li><a href="3.html" style="color:blue">JavaScript</a></li>
-  </ol>
+  <div id="grid">
+    <ol class="list">
+      <li><a href="1.html" style="color:blue">HTML</a></li>
+      <li><a href="2.html">CSS</a></li>
+      <li><a href="3.html">JavaScript</a></li>
+    </ol>
+    <div id="ARTICLE">
 
-  <h3>JavaScript</h3>
-  <p>
-    JavaScript는 객체 기반의 스크립트 프로그래밍 언어이다. <br>
-    이 언어는 웹 브라우저 내에서 주로 사용한다.
-  </p>
-
+      <h3>JavaScript</h3>
+      <p>
+        JavaScript는 객체 기반의 스크립트 프로그래밍 언어이다. <br>
+        이 언어는 웹 브라우저 내에서 주로 사용한다.
+      </p>
+    </div>
+  </div>
 
 
 </body>
