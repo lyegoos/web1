@@ -31,6 +31,16 @@
   document.querySelector('body').style.backgroundColor='white';
   document.querySelector('body').style.color='black';
   ">
+  <input id="dark_white" type "button" value="dark mode" onclick="
+    if(document.querySelector('#dark_white').value === 'dark mode'){
+      document.querySelector('body').style.backgroundColor = 'black';
+      document.querySelector('body').style.color = 'white';
+      document.querySelector('#dark_white').value = 'white mode';
+    } else {
+      document.querySelector('body').style.backgroundColor = 'white';
+      document.querySelector('body').style.color = 'black';
+      document.querySelector('#dark_white').value = 'dark mode';
+    }">
   <p>
     <strong> C,</strong> <u> JAVA </u><br>
   </p>
