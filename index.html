@@ -32,14 +32,29 @@
   document.querySelector('body').style.color='black';
   ">
   <input id="dark_white" type "button" value="dark mode" onclick="
-    if(document.querySelector('#dark_white').value === 'dark mode'){
-      document.querySelector('body').style.backgroundColor = 'black';
-      document.querySelector('body').style.color = 'white';
-      document.querySelector('#dark_white').value = 'white mode';
+    var target = document.querySelector('body');
+    if(this.value === 'dark mode'){
+      target.style.backgroundColor = 'black';
+      target.style.color = 'white';
+      this.value = 'white mode';
+
+      var alist = document.querySelectorAll('a');
+      var i = 0;
+      while(i < alist.length){
+        alist[i].style.color = 'powderblue';
+        i = i + 1;
+      }
     } else {
-      document.querySelector('body').style.backgroundColor = 'white';
-      document.querySelector('body').style.color = 'black';
-      document.querySelector('#dark_white').value = 'dark mode';
+      target.style.backgroundColor = 'white';
+      target.style.color = 'black';
+      this.value = 'dark mode';
+
+      var alist = document.querySelectorAll('a');
+      var i = 0;
+      while(i < alist.length){
+        alist[i].style.color = 'blue';
+        i = i + 1;
+      }
     }">
   <p>
     <strong> C,</strong> <u> JAVA </u><br>
