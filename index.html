@@ -13,6 +13,35 @@
 
     gtag('config', 'G-SJ3QVML1DQ');
   </script>
+  <script>
+  function darkWhiteHandler(self){
+    var target = document.querySelector('body');
+    if(self.value === 'dark mode'){
+      target.style.backgroundColor = 'black';
+      target.style.color = 'white';
+      self.value = 'white mode';
+
+      var alist = document.querySelectorAll('a');
+      var i = 0;
+      while(i < alist.length){
+        alist[i].style.color = 'powderblue';
+        i = i + 1;
+      }
+    } else {
+      target.style.backgroundColor = 'white';
+      target.style.color = 'black';
+      self.value = 'dark mode';
+
+      var alist = document.querySelectorAll('a');
+      var i = 0;
+      while(i < alist.length){
+        alist[i].style.color = 'blue';
+        i = i + 1;
+      }
+    }
+  }
+  </script>
+
   <link rel="stylesheet" href="style.css">
   <style>
     #ARTICLE{
@@ -32,30 +61,8 @@
   document.querySelector('body').style.color='black';
   ">
   <input id="dark_white" type "button" value="dark mode" onclick="
-    var target = document.querySelector('body');
-    if(this.value === 'dark mode'){
-      target.style.backgroundColor = 'black';
-      target.style.color = 'white';
-      this.value = 'white mode';
-
-      var alist = document.querySelectorAll('a');
-      var i = 0;
-      while(i < alist.length){
-        alist[i].style.color = 'powderblue';
-        i = i + 1;
-      }
-    } else {
-      target.style.backgroundColor = 'white';
-      target.style.color = 'black';
-      this.value = 'dark mode';
-
-      var alist = document.querySelectorAll('a');
-      var i = 0;
-      while(i < alist.length){
-        alist[i].style.color = 'blue';
-        i = i + 1;
-      }
-    }">
+    darkWhiteHandler(this);"
+  >
   <p>
     <strong> C,</strong> <u> JAVA </u><br>
   </p>
