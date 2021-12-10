@@ -20,6 +20,26 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 
+    <script>
+        $(document).ready(function () {
+            ex_Rate();
+        });
+        function ex_Rate(){
+            $.ajax({
+                type: "GET",
+                url: "http://spartacodingclub.shop/sparta_api/rate",
+                data: {},
+                success: function (response) {
+                    let today_rate = response['rate'];
+
+                    let temp_html = `<p class="bluefont"><br>달러-원 환율:${today_rate}</p>`
+
+                    $('#info').append(temp_html);
+                }
+            })
+        }
+    </script>
+
     <title>Week1</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,6 +62,9 @@
             display: block;
             margin-bottom: 10px;
         }
+        .bluefont{
+            color: blue;
+        }
     </style>
 </head>
 
@@ -50,7 +73,7 @@
         <img class="notebook" src="https://www.thegear.kr/news/photo/old/imgdata/thegear_co_kr/201704/2017040317565422.jpg">
         <h1 style="margin:0px 0px 0px 10px; display:inline">노트북을 팝니다</h1>
         <span>가격: 1,500,000원/대</span>
-        <div style="margin:20px 0px 20px 0px;">삼성 노트북9 올웨이즈 13의 무게는 799g입니다.<br>
+        <div id="info" style="margin:20px 0px 20px 0px;">삼성 노트북9 올웨이즈 13의 무게는 799g입니다.<br>
             가벼우면 내구성이 걱정되는데, 매끈한 본체 케이스는 컴퓨터 수치제어<br>
             제조 공법의 마그네슘 합금으로 만들어져 튼튼합니다.<br>
             작고 가벼운 소형 어댑터도 장점이에요.</div>
