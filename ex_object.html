@@ -16,5 +16,21 @@
       classMember["student Mento"] = "John";
       document.write("student Mento : " +classMember["student Mento"]+"<br>");
     </script>
+    <!-- loop -->
+    
+    <script>
+      for(var key in classMember){
+        document.write(key+' : '+classMember[key]+'<br>');
+      }
+    </script>
+    <!-- method -->
+    <script>
+      classMember.showAll = function(){
+        for(var key in this){
+          document.write(key+' : '+this[key]+'<br>');
+        }
+      }
+      classMember.showAll();
+    </script>
   </body>
 </html>
