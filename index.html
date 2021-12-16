@@ -1,171 +1,192 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+
 <head>
-  <title>practice html - Welcome</title>
-  <meta charset="utf-8">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SJ3QVML1DQ"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    gtag('config', 'G-SJ3QVML1DQ');
-  </script>
-  <script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 
-  var Links = {
-    SetColor:function(color){
-      var alist = document.querySelectorAll('a');
-      var i = 0;
-      while(i < alist.length){
-        alist[i].style.color = color;
-        i = i + 1;
-      }
-    }
-  }
-
-  var Body = {
-    SetColor:function(color){
-      document.querySelector('body').style.color = color;
-    },
-    SetBackgroundColor:function(color){
-        document.querySelector('body').style.backgroundColor = color;
-    }
-  }
-
-  function darkWhiteHandler(self){
-    var target = document.querySelector('body');
-    if(self.value === 'dark mode'){
-      Body.SetBackgroundColor('black');
-      Body.SetColor('white');
-      self.value = 'white mode';
-
-      Links.SetColor('powderblue');
-    } else {
-      Body.SetBackgroundColor('white');
-      Body.SetColor('black');
-      self.value = 'dark mode';
-
-      Links.SetColor('blue');
-    }
-  }
-  </script>
-
-  <link rel="stylesheet" href="style.css">
-  <style>
-    #ARTICLE{
-      padding-top:23px;
-      padding-left:40px;
-    }
-  </style>
-</head>
-<body>
-  <h1><a href="https://velog.io/@dbwlsghks258" target="_blank" title="lyegoos velog">LYEGOOS</a> HTML</h1>
-  <input type="button" value="dark mode" onclick="
-  document.querySelector('body').style.backgroundColor='black';
-  document.querySelector('body').style.color='white';
-  ">
-  <input type="button" value="white mode" onclick="
-  document.querySelector('body').style.backgroundColor='white';
-  document.querySelector('body').style.color='black';
-  ">
-  <input id="dark_white" type "button" value="dark mode" onclick="
-    darkWhiteHandler(this);"
-  >
-  <p>
-    <strong> C,</strong> <u> JAVA </u><br>
-  </p>
-  <h3><u>Frequency</u></h3>
-  <p style="margin-top: 40px">
-    - br tag is used when we need new line
-  - br tag don't need /br tag
-  <br>
-    - p tag is paragraph tag
-    - p tag need /p tag
-  <br>
-    - img tag inserts image to text
-    - src means source
-    - src, width... are attributes
-  <br>
-    - parents/child tag: li, ul
-    - Use li tag for making list
-    - (control + click) can type words in same time
-  </p>
-  <ul>
-  <li>1. LANGUAGE</li>
-  <li>2. STUDY</li>
-  <li>3. PROGRAMMING</li>
-  </ul>
-  <ul>
-  <li>UNORDERED</li>
-  <li>LIST</li>
-  <li>HAS NOT NUM</li>
-  </ul>
-  <ol>
-    <li>첫 번째</li>
-    <li>두 번째</li>
-    <li>세 번째</li>
-  </ol>
-  <img src = "lyegoos.jpg">
-  <p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/73uGZeszfNU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </p>
-  <p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/F5tSoaJ93ac" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </p>
-
-  <h2><a href="index.html" style="color:blue">WEB</a></h2>
-  <div id="grid">
-    <ol class="list">
-      <li><a href="1.html" style="color:blue">HTML</a></li>
-      <li><a href="2.html">CSS</a></li>
-      <li><a href="3.html">JavaScript</a></li>
-    </ol>
-    <div id="ARTICLE">
-      <p>
-        원하는 항목을 선택하세요.
-      </p>
-    </div>
-  </div>
-
-
-    <!--Comment Part-->
-    <div id="disqus_thread"></div>
     <script>
-        /*
-        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-        /*
-        var disqus_config = function () {
-        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-        };
-        */
-        (function() { // DON'T EDIT BELOW THIS LINE
-        var d = document, s = d.createElement('script');
-        s.src = 'https://web1-1yj7oljyuo.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <!--End of Comment Part-->
+        $(document).ready(function () {
+            ex_Rate();
+            order_listing();
+        });
+        function ex_Rate(){
+            $.ajax({
+                type: "GET",
+                url: "http://spartacodingclub.shop/sparta_api/rate",
+                data: {},
+                success: function (response) {
+                    let today_rate = response['rate'];
 
-    <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/61a0be3d53b398095a663694/1fldue8dn';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-    })();
-    </script>
-    <!--End of Tawk.to Script-->
+                    let temp_html = `<p class="bluefont"><br>달러-원 환율:${today_rate}</p>`
 
+                    $('#info').append(temp_html);
+                }
+            })
+        }
+    </script>
+
+    <title>쇼핑몰</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gowun+Dodum&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            font-family: 'Black Han Sans', sans-serif;
+            font-family: 'Gowun Dodum', sans-serif;
+        }
+
+        .sell{
+            width: 500px;
+            margin: auto;
+        }
+        .notebook{
+            width: 500px;
+            height: 300px;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .bluefont{
+            color: blue;
+        }
+        .table{
+            width:800px;
+            margin:auto;
+            margin-top:25px;
+        }
+    </style>
+
+    <script>
+
+    function order_listing() {
+        // 주문목록 보기 API 연결
+        $.ajax({
+            type: "GET",
+            url: "/order",
+            data: {},
+            success: function (response) {
+                let orders = response['all_orders'];
+
+                for(let i = 0; i < orders.length; i++){
+                    let name = orders[i]['name'];
+                    let quantity = orders[i]['quantity'];
+                    let address = orders[i]['address'];
+                    let phone_num = orders[i]['phone_num'];
+
+                    let temp_html = `<tr>
+                                        <th scope="row">${name}</th>
+                                        <td>${quantity}</td>
+                                        <td>${address}</td>
+                                        <td>${phone_num}</td>
+                                     </tr>`
+
+                    $('#order_info').append(temp_html);
+                }
+            }
+        })
+    }
+
+    function order() {
+        // 주문하기 API 연결, 넘겨줄 값을 변수로 먼저 지정
+
+        let name = $('#custom_name').val();
+        let quantity = $('#inputGroupSelect01').val();
+        let address = $('#custom_address').val();
+        let phone_num = $('#custom_num').val();
+
+        $.ajax({
+            type: "POST",
+            url: "/order",
+            data: {name_give:name, quantity_give:quantity, address_give:address, phone_give:phone_num},
+            success: function (response) { // 성공하면 실행
+                alert(response["msg"]);
+                window.location.reload();
+            }
+        })
+    }
+</script>
+
+</head>
+
+<body>
+    <div class="sell">
+        <img class="notebook" src="https://www.thegear.kr/news/photo/old/imgdata/thegear_co_kr/201704/2017040317565422.jpg">
+        <h1 style="margin:0px 0px 0px 10px; display:inline">노트북을 팝니다</h1>
+        <span>가격: 1,500,000원/대</span>
+        <div id="info" style="margin:20px 0px 20px 0px;">삼성 노트북9 올웨이즈 13의 무게는 799g입니다.<br>
+            가벼우면 내구성이 걱정되는데, 매끈한 본체 케이스는 컴퓨터 수치제어<br>
+            제조 공법의 마그네슘 합금으로 만들어져 튼튼합니다.<br>
+            작고 가벼운 소형 어댑터도 장점이에요.</div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">주문자 이름</span>
+            </div>
+            <input type="text" id="custom_name" class="form-control" placeholder="" aria-label="Username"
+                   aria-describedby="basic-addon1">
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">수량</label>
+            </div>
+            <select class="custom-select" id="inputGroupSelect01">
+                <option selected>&nbsp;-- 수량을 선택하세요 --</option>
+                <option value="1">1대</option>
+                <option value="2">2대</option>
+                <option value="3">3대</option>
+            </select>
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">주소</span>
+            </div>
+            <input type="text" id="custom_address" class="form-control" placeholder="" aria-label="Username"
+                   aria-describedby="basic-addon1">
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">전화번호</span>
+            </div>
+            <input type="text" id="custom_num" class="form-control" placeholder="" aria-label="Username"
+                   aria-describedby="basic-addon1">
+        </div>
+
+        <button onclick="order()" style="margin:auto; display:block;" type="button" class="btn btn-primary">주문하기</button>
+
+    </div>
+
+    <table class="table">
+        < >
+            <tr>
+              <th scope="col">이름</th>
+              <th scope="col">수량</th>
+              <th scope="col">주소</th>
+              <th scope="col">전화번호</th>
+            </tr>
+        </thead>
+        <tbody id="order_info">
+        </tbody>
+    </table>
 </body>
+
 </html>
